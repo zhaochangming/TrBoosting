@@ -5,8 +5,6 @@ import torch.nn as nn
 from sklearn.linear_model import Ridge
 from math import ceil
 
-mlp_ratio = 5
-
 
 class NNLinear:
     def __init__(self, W, bias):
