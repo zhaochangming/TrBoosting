@@ -255,8 +255,8 @@ class BoostingBLS(node_generator):
         with np.errstate(divide="ignore", over="ignore"):
             z = np.where(y, 1. / prob_, -1. / (1. - prob_))
         z = np.clip(z, a_min=-MAX_RESPONSE, a_max=MAX_RESPONSE)
-        if source_true_index is not None:
-            sample_weight[~source_true_index] = 0.0
+#         if source_true_index is not None:
+#             sample_weight[~source_true_index] = 0.0
         return sample_weight, z
 
     def predict_score(self, node_model, X):
